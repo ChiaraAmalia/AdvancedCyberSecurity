@@ -1,0 +1,20 @@
+07-05-2023 Simone Scalella
+
+L'attributo 'Fwd Byts/b Avg' presente nel file 'dataset/Wednesday-14-02-2018_TrafficForML_CICFlowMeter.csv' assume sempre valore zero. Conviene rimuoverlo.
+Anche altri attributi hanno gli stessi valori, sono 'Fwd Pkts/b Avg, Fwd Blk Rate Avg, Bwd Byts/b Avg, Bwd Pkts/b Avg, Bwd Blk Rate Avg'.
+
+Ho cercato ulteriori informazioni sul sito del dataset, ma non le ho trovate, non ho capito perchè hanno solo questi valori, forse sono calcolati male.
+Riguardano entrambi i flussi forward e backward, se uno è zero probabilmente ha senso che lo sia pure l'altro.
+
+Altra analisi l'ho fatta sugli attributi che hanno due valori, ma non danno contributo informativo, perchè assumono sempre lo stesso valore o comunque non sono buoni per discriminare.
+Ad esempio 'Fwd PSH Flags' assume quasi sempre valore zero, con questo valore può essere sia maligno che benigno. Anche se quando vale 1 significa che che il flusso è benigno, esce talmente poche volte che non ha molta capacità di discriminare gli elementi.
+Altre dimensioni con le stesse caratteristiche sono 'FIN Flag Cnt, SYN Flag Cnt, RST Flag Cnt, URG Flag Cnt e ECE Flag Cnt'
+
+Altre feature che hanno sempre valore zero sono 'Bwd PSH Flags, Fwd URG Flags, Bwd URG Flags e CWE Flag Count'.
+
+Questo attributo ha dei valori nulli 'Flow Byts/s'.
+
+In conclusione, ho provato a fare degli istogrammi per ogni feature, cercando di normalizzarla, anche se per qualche feature non funziona bene.
+Tutti gli istogrammi sono stati stampati con relativa leggenda, inoltre, per normalizzare, ho diviso la feature per il suo valore massimo.
+
+Infine, ho provato a fare gli scatter di tutte le possibili combnazioni di 2 feature.
