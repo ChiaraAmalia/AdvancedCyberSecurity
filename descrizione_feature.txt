@@ -1,0 +1,17 @@
+forward: source to destination
+backward: destination to source
+
+fl_dur: durata del flusso
+tot_fw_pk: numero totale pacchetti in direzione forward
+tot_bw_pk: numero totale pacchetti in direzione backward
+tot_l_fw_pkt: dimensione totale del pacchetto in direzione forward
+fw_pkt_l_max: dimensione massima del pacchetto in direzione forward
+fw_pkt_l_min: dimensione minima del pacchetto in direzione forward
+fw_pkt_l_avg: dimensione media del pacchetto in direzione forward
+fw_pkt_l_std: deviazione standard della dimensione del pacchetto in direzione forward
+Bw_pkt_l_max: dimensione massima del pacchetto in direzione backward
+Bw_pkt_l_min: dimensione minima del pacchetto in direzione backward
+Bw_pkt_l_avg: dimensione media del pacchetto in direzione backward
+Bw_pkt_l_std: deviazione standard della dimensione del pacchetto in direzione backward
+fl_byt_s: numero di byte trasferiti per secondo (flow byte rate)
+fl_pkt_s: numero di pacchetti trasferiti per secondo (flow packet rate)
