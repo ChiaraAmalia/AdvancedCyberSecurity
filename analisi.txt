@@ -19,7 +19,7 @@ Tutti gli istogrammi sono stati stampati con relativa leggenda, inoltre, per nor
 
 Infine, ho provato a fare gli scatter di tutte le possibili combnazioni di 2 feature.
 
-08-05-2023 Simone e Riccardo
+08-05-2023 Simone, Riccardo e David
 
 Abbiamo rilevato altre feature che non contengono informazioni discriminanti, infatti, in queste feature gli attacchi hanno sempre valore zero, e i benigni hanno quasi sempre valore zero.
 Di seguito riportiamo una lista di questi elementi.
@@ -34,3 +34,16 @@ Sono:
  - Fwd Act Data Pkts ( Abbastanza utile per discriminare, il valore 0 assunto dagli attaccanti si ripete abbastanza in benign  )
 
  - Fwd Seg Size Min ( Molto discriminante )
+
+ - Subflow Bwd Byts ( Abbastanza utile per discriminare, il valore 0 assunto dagli attaccanti si ripete abbastanza in benign  ) 
+
+ - Init Fwd Win Byts ( Molto utile per discriminare )
+
+ - Init Bwd Win Byts ( Pre questa feature è più utile considerare solo i valori 0 e 230, perchè gli altri non sono molto utili per discriminare )
+
+ - Fwd Act Data Pkts ( Per questa feature potremmo usare solo il valore 16, in quanto lo zero, che aiuta a discriminare anche l'altro attacco si ripete molto nei benigni, e il valore 6 si ripete pochissimo nell'attacco stesso )
+
+ - 
+
+ Per tutte le feature significative, controllare quante volte quel valore si ripete negli attaccanti.
+ Se un parole si ripete poche volte lo possiamo considerare rumore.
