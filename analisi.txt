@@ -18,3 +18,19 @@ In conclusione, ho provato a fare degli istogrammi per ogni feature, cercando di
 Tutti gli istogrammi sono stati stampati con relativa leggenda, inoltre, per normalizzare, ho diviso la feature per il suo valore massimo.
 
 Infine, ho provato a fare gli scatter di tutte le possibili combnazioni di 2 feature.
+
+08-05-2023 Simone e Riccardo
+
+Abbiamo rilevato altre feature che non contengono informazioni discriminanti, infatti, in queste feature gli attacchi hanno sempre valore zero, e i benigni hanno quasi sempre valore zero.
+Di seguito riportiamo una lista di questi elementi.
+
+Abbiamo trovato alcune feature che ci permettono di discrimare attaccanti e non. Di seguito ne riportiamo una lista.
+Sono:
+
+- Init Fwd Win Byts
+- Init Bwd Win Byts ( Abbastanza utile per discriminare, il valore -1 assunto dagli attaccanti si ripete abbastanza in benign  )
+ Ha senso che sono significativi perchè rappresentano il forward e backword della caratteristica.
+
+ - Fwd Act Data Pkts ( Abbastanza utile per discriminare, il valore 0 assunto dagli attaccanti si ripete abbastanza in benign  )
+
+ - Fwd Seg Size Min ( Molto discriminante )
