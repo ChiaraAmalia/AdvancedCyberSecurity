@@ -15,3 +15,5 @@ Bw_pkt_l_avg: dimensione media del pacchetto in direzione backward
 Bw_pkt_l_std: deviazione standard della dimensione del pacchetto in direzione backward
 fl_byt_s: numero di byte trasferiti per secondo (flow byte rate)
 fl_pkt_s: numero di pacchetti trasferiti per secondo (flow packet rate)
+fl_iat_avg: media di tempo tra due flussi
+fl_iat_std: deviazione standard di tempo tra due flussi
