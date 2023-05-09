@@ -15,5 +15,30 @@ Bw_pkt_l_avg: dimensione media del pacchetto in direzione backward
 Bw_pkt_l_std: deviazione standard della dimensione del pacchetto in direzione backward
 fl_byt_s: numero di byte trasferiti per secondo (flow byte rate)
 fl_pkt_s: numero di pacchetti trasferiti per secondo (flow packet rate)
-fl_iat_avg: media di tempo tra due flussi
+fl_iat_avg: tempo medio tra due flussi
 fl_iat_std: deviazione standard di tempo tra due flussi
+fl_iat_max: tempo massimo tra due flussi
+fl_iat_min: tempo minimo tra due flussi
+fw_iat_tot: tempo totale tra due pacchetti inviati in direzione forward
+fw_iat_avg: tempo medio tra due pacchetti inviati in direzione forward
+fw_iat_std: deviazione standard di tempo tra due pacchetti inviati in direzione forward
+fw_iat_max: tempo massimo tra due pacchetti inviati in direzione forward
+fw_iat_min: tempo minimo tra due pacchetti inviati in direzione forward
+bw_iat_tot: tempo totale tra due pacchetti inviati in direzione backward
+bw_iat_avg: tempo medio tra due pacchetti inviati in direzione backward
+bw_iat_std: deviazione standard di tempo tra due pacchetti inviati in direzione backward
+bw_iat_max: tempo massimo tra due pacchetti inviati in direzione backward
+bw_iat_min: tempo minimo tra due pacchetti inviati in direzione backward
+fw_psh_flag: numero di volte che PSH flag è stao cambiato nei pacchetti che viaggiano in direzione forward
+
+
+https://packetlife.net/blog/2011/mar/2/tcp-flags-psh-and-urg/
+
+L'Header TCP contiene parecchi campi booleani ad un bit chiamati flag utilizzati per influenzare il flusso di dati attraverso la connessione TCP.
+
+PSH: Il socket che viene reso disponibile dal TCP al livello di sessione può essere scritto dall'applicazione con l'opzione di spingere (pushing) i dati immediatamente, piuttosto che aspettare che altri dati entrino nel buffer. Quando questo accade, la PSH flag nel pacchetto TCP in uscita è impostato su 1.
+
+URG: URG flag viene usato per informare una stazione ricevente che alcuni dati entro un segmento sono urgenti e devono essere prioritizzati. Se il flag URG è impostato,la stazione ricevente valuta l'urgent pointer (campo a 16 bit nell'intestazione TCP). Questo puntatore indica quanti dati nel segmento, a partire dal primo byte, sono urgenti.
+
+bw_psh_flag: numero di volte che PSH (push) flag è stao cambiato nei pacchetti che viaggiano in direzione backward
+fw_urg_flag: numero di volte che URG (urgent) flag è stao cambiato nei pacchetti che viaggiano in direzione forward
