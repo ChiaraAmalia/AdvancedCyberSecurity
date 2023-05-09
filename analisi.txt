@@ -47,3 +47,10 @@ Sono:
 
  Per tutte le feature significative, controllare quante volte quel valore si ripete negli attaccanti.
  Se un parole si ripete poche volte lo possiamo considerare rumore.
+
+ANALISI 09/05
+Il file chiara_analysis al momento contiene un dataframe che contiene tutti i file csv eccetto quello grande da 3 gb. Tale file lo andremo ad utilizzare poi in futuro per fare le analisi su tutti i file, considerando tutte le tipologie di attacco.
+
+Il file 14_chiara_analysis contiene un dataframe relativo al file del 14 febbraio 2018 in cui siamo andati ad individuare le diverse tipologie di attacco presenti e a rappresentarle dapprima nel dataframe principale sottoforma di numero, per effettuare una discriminazione delle feature mediante ANOVA e, un secondo dataframe che viene poi utilizzato per plottare le feature in cui vengono mantenute le diverse tipologie di attacco sottoforma di parole.
+I campi vengono anche normalizzati andandoli a dividere tutti per il valore massimo della relativa colonna e vengono rimossi ulteriori righe con campi nulli.
+Con l'applicazione dell'ANOVA abbiamo individuato le 10 feature più importanti che vengono poi utilizzate per realizzare gli scatterplot andando a rappresentare tutte le possibili combinazioni delle feature, ottenendo 45 grafici.
