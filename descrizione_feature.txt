@@ -29,7 +29,6 @@ bw_iat_avg: tempo medio tra due pacchetti inviati in direzione backward
 bw_iat_std: deviazione standard di tempo tra due pacchetti inviati in direzione backward
 bw_iat_max: tempo massimo tra due pacchetti inviati in direzione backward
 bw_iat_min: tempo minimo tra due pacchetti inviati in direzione backward
-fw_psh_flag: numero di volte che PSH flag è stao cambiato nei pacchetti che viaggiano in direzione forward
 
 
 https://packetlife.net/blog/2011/mar/2/tcp-flags-psh-and-urg/
@@ -38,7 +37,40 @@ L'Header TCP contiene parecchi campi booleani ad un bit chiamati flag utilizzati
 
 PSH: Il socket che viene reso disponibile dal TCP al livello di sessione può essere scritto dall'applicazione con l'opzione di spingere (pushing) i dati immediatamente, piuttosto che aspettare che altri dati entrino nel buffer. Quando questo accade, la PSH flag nel pacchetto TCP in uscita è impostato su 1.
 
-URG: URG flag viene usato per informare una stazione ricevente che alcuni dati entro un segmento sono urgenti e devono essere prioritizzati. Se il flag URG è impostato,la stazione ricevente valuta l'urgent pointer (campo a 16 bit nell'intestazione TCP). Questo puntatore indica quanti dati nel segmento, a partire dal primo byte, sono urgenti.
+URG: URG flag viene usato per informare una stazione ricevente che alcuni dati entro un segmento sono urgenti e devono essere prioritizzati. Se il flag URG è impostato, la stazione ricevente valuta l'urgent pointer (campo a 16 bit nell'intestazione TCP). Questo puntatore indica quanti dati nel segmento, a partire dal primo byte, sono urgenti.
 
-bw_psh_flag: numero di volte che PSH (push) flag è stao cambiato nei pacchetti che viaggiano in direzione backward
-fw_urg_flag: numero di volte che URG (urgent) flag è stao cambiato nei pacchetti che viaggiano in direzione forward
+fw_psh_flag: numero di volte che PSH (push) flag è stato cambiato nei pacchetti che viaggiano in direzione forward
+bw_psh_flag: numero di volte che PSH (push) flag è stato cambiato nei pacchetti che viaggiano in direzione backward
+fw_urg_flag: numero di volte che URG (urgent) flag è stato cambiato nei pacchetti che viaggiano in direzione forward
+bw_urg_flag: numero di volte che URG (urgent) flag è stato cambiato nei pacchetti che viaggiano in direzione backward
+fw_hdr_len: byte totali utilizzati per l'intestazione in direzione forward
+bw_hdr_len: byte totali utilizzati per l'intestazione in direzione backward
+fw_pkt_s: numero di pacchetti forward per secondo
+bw_pkt_s: numero di pacchetti backward per secondo
+pkt_len_min: lunghezza minima di un flusso
+pkt_len_max: lunghezza massima di un flusso
+pkt_len_avg: lunghezza media di un flusso
+pkt_len_std: deviazione standard della lunghezza di un flusso
+pkt_len_va: tempo di arrivo minimo tra un pacchetto e l'altro (Minimum inter-arrival time of packet (il tempo di inter-arrivo è il tempo che intercorre tra un arrivo nel sistema e il successivo))
+
+https://www.keycdn.com/support/tcp-flags
+
+fin_cnt: numero di pacchetti con flag = FIN (FIN (finished flag) viene utilizzato per indicare l'ultimo pacchetto inviato dal mittente, indicante che non ci sono più dati dopo di quello inviati dal mittente)
+syn_cnt: numero di pacchetti con flag = SYN (SYN (syncronization flag) viene utilizzato per stabilire un handshake a tre vie tra due host. Solo il primo pacchetto sia del mittente che del destinatario dovrebbe avere questo flag impostato)
+rst_cnt: numero di pacchetti con flag = RST (RST (reset flag) viene inviato dal destinatario al mittente quando un pacchetto viene inviato ad un particolare host che non lo aspettava)
+pst_cnt: numero di pacchetti con flag = PUSH (PUSH indica al destinatario di elaborare questi pacchetti man mano che vengono ricevuti invece di memorizzarli nel buffer.)
+ack_cnt: numero di pacchetti con flag = ACK (ACK (acknowledgment flag) viene utilizzata per confermare la corretta ricezione di un pacchetto)
+urg_cnt: numero di pacchetti con flag = URG (URG (urgent flag) viene utilizzato per notificare il destinatario di processare i pacchetti urgenti prima degli altri pacchetti)
+cwe_cnt: numero di pacchetti con flag = CWE (CWE (CWR = congestion window reduced flag (?)) viene utilizzato dal mittente per indicare che ha ricevuto un pacchetto con il flag ECE impostato)
+ece_cnt: numero di pacchetti con flag = ECE (ECE viene utilizzato per indicare se il peer TCP è compatibile con ECN. ECN consente la notifica end-to-end della congestione della rete senza eliminare i pacchetti)
+down_up_ratio: rapporto tra download e upload
+pkt_size_avg: dimensione media del pacchetto
+fw_seg_avg: dimensione media osservata in direzione forward
+bw_seg_avg: dimensione media osservata in direzione backward
+fw_byt_blk_avg: numero medio del tasso di massa di bytes (bytes bulk rate) in direzione forward
+fw_pkt_blk_avg: numero medio del tasso di massa di pacchetti (packets bulk rate) in direzione forward
+fw_blk_rate_avg: numero medio del tasso di massa in direzione forward
+bw_byt_blk_avg: numero medio del tasso di massa di bytes (bytes bulk rate) in direzione backward
+bw_pkt_blk_avg: numero medio del tasso di massa di pacchetti (packets bulk rate) in direzione backward
+bw_blk_rate_avg: numero medio del tasso di massa in direzione backward
+
