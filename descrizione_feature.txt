@@ -1,34 +1,35 @@
 forward: source to destination
 backward: destination to source
 
-fl_dur: durata del flusso
-tot_fw_pk: numero totale pacchetti in direzione forward
-tot_bw_pk: numero totale pacchetti in direzione backward
-tot_l_fw_pkt: dimensione totale del pacchetto in direzione forward
-fw_pkt_l_max: dimensione massima del pacchetto in direzione forward
-fw_pkt_l_min: dimensione minima del pacchetto in direzione forward
-fw_pkt_l_avg: dimensione media del pacchetto in direzione forward
-fw_pkt_l_std: deviazione standard della dimensione del pacchetto in direzione forward
-Bw_pkt_l_max: dimensione massima del pacchetto in direzione backward
-Bw_pkt_l_min: dimensione minima del pacchetto in direzione backward
-Bw_pkt_l_avg: dimensione media del pacchetto in direzione backward
-Bw_pkt_l_std: deviazione standard della dimensione del pacchetto in direzione backward
-fl_byt_s: numero di byte trasferiti per secondo (flow byte rate)
-fl_pkt_s: numero di pacchetti trasferiti per secondo (flow packet rate)
-fl_iat_avg: tempo medio tra due flussi
-fl_iat_std: deviazione standard di tempo tra due flussi
-fl_iat_max: tempo massimo tra due flussi
-fl_iat_min: tempo minimo tra due flussi
-fw_iat_tot: tempo totale tra due pacchetti inviati in direzione forward
-fw_iat_avg: tempo medio tra due pacchetti inviati in direzione forward
-fw_iat_std: deviazione standard di tempo tra due pacchetti inviati in direzione forward
-fw_iat_max: tempo massimo tra due pacchetti inviati in direzione forward
-fw_iat_min: tempo minimo tra due pacchetti inviati in direzione forward
-bw_iat_tot: tempo totale tra due pacchetti inviati in direzione backward
-bw_iat_avg: tempo medio tra due pacchetti inviati in direzione backward
-bw_iat_std: deviazione standard di tempo tra due pacchetti inviati in direzione backward
-bw_iat_max: tempo massimo tra due pacchetti inviati in direzione backward
-bw_iat_min: tempo minimo tra due pacchetti inviati in direzione backward
+fl_dur (Flow Duration): durata del flusso
+tot_fw_pk (Tot Fwd Pkts): numero totale pacchetti in direzione forward
+tot_bw_pk (Tot Bwd Pkts): numero totale pacchetti in direzione backward
+tot_l_fw_pkt (TotLen Fwd Pkts): dimensione totale del pacchetto in direzione forward
+tot_l_bw_pkt (TotLen Bwd Pkts): dimensione totale del pacchetto in direzione backward
+fw_pkt_l_max (Fwd Pkt Len Max): dimensione massima del pacchetto in direzione forward
+fw_pkt_l_min (Fwd Pkt Len Min): dimensione minima del pacchetto in direzione forward
+fw_pkt_l_avg (Fwd Pkt Len Mean): dimensione media del pacchetto in direzione forward
+fw_pkt_l_std (Fwd Pkt Len Std): deviazione standard della dimensione del pacchetto in direzione forward
+Bw_pkt_l_max (Bwd Pkt Len Max): dimensione massima del pacchetto in direzione backward
+Bw_pkt_l_min (Bwd Pkt Len Min): dimensione minima del pacchetto in direzione backward
+Bw_pkt_l_avg (Bwd Pkt Len Mean): dimensione media del pacchetto in direzione backward
+Bw_pkt_l_std (Bwd Pkt Len Std): deviazione standard della dimensione del pacchetto in direzione backward
+fl_byt_s (Flow Byts/s): numero di byte trasferiti per secondo (flow byte rate)
+fl_pkt_s (Flow Pkts/s): numero di pacchetti trasferiti per secondo (flow packet rate)
+fl_iat_avg (Flow IAT Mean): tempo medio tra due flussi
+fl_iat_std (Flow IAT Std): deviazione standard di tempo tra due flussi
+fl_iat_max (Flow IAT Max): tempo massimo tra due flussi
+fl_iat_min (Flow IAT Min): tempo minimo tra due flussi
+fw_iat_tot (Fwd IAT Tot): tempo totale tra due pacchetti inviati in direzione forward
+fw_iat_avg (Fwd IAT Mean): tempo medio tra due pacchetti inviati in direzione forward
+fw_iat_std (Fwd IAT Std): deviazione standard di tempo tra due pacchetti inviati in direzione forward
+fw_iat_max (Fwd IAT Max): tempo massimo tra due pacchetti inviati in direzione forward
+fw_iat_min (Fwd IAT Min): tempo minimo tra due pacchetti inviati in direzione forward
+bw_iat_tot (Bwd IAT Tot): tempo totale tra due pacchetti inviati in direzione backward
+bw_iat_avg (Bwd IAT Mean): tempo medio tra due pacchetti inviati in direzione backward
+bw_iat_std (Bwd IAT Std): deviazione standard di tempo tra due pacchetti inviati in direzione backward
+bw_iat_max (Bwd IAT Max): tempo massimo tra due pacchetti inviati in direzione backward
+bw_iat_min (Bwd IAT Min): tempo minimo tra due pacchetti inviati in direzione backward
 
 
 https://packetlife.net/blog/2011/mar/2/tcp-flags-psh-and-urg/
@@ -39,38 +40,54 @@ PSH: Il socket che viene reso disponibile dal TCP al livello di sessione può es
 
 URG: URG flag viene usato per informare una stazione ricevente che alcuni dati entro un segmento sono urgenti e devono essere prioritizzati. Se il flag URG è impostato, la stazione ricevente valuta l'urgent pointer (campo a 16 bit nell'intestazione TCP). Questo puntatore indica quanti dati nel segmento, a partire dal primo byte, sono urgenti.
 
-fw_psh_flag: numero di volte che PSH (push) flag è stato cambiato nei pacchetti che viaggiano in direzione forward
-bw_psh_flag: numero di volte che PSH (push) flag è stato cambiato nei pacchetti che viaggiano in direzione backward
-fw_urg_flag: numero di volte che URG (urgent) flag è stato cambiato nei pacchetti che viaggiano in direzione forward
-bw_urg_flag: numero di volte che URG (urgent) flag è stato cambiato nei pacchetti che viaggiano in direzione backward
-fw_hdr_len: byte totali utilizzati per l'intestazione in direzione forward
-bw_hdr_len: byte totali utilizzati per l'intestazione in direzione backward
-fw_pkt_s: numero di pacchetti forward per secondo
-bw_pkt_s: numero di pacchetti backward per secondo
-pkt_len_min: lunghezza minima di un flusso
-pkt_len_max: lunghezza massima di un flusso
-pkt_len_avg: lunghezza media di un flusso
-pkt_len_std: deviazione standard della lunghezza di un flusso
-pkt_len_va: tempo di arrivo minimo tra un pacchetto e l'altro (Minimum inter-arrival time of packet (il tempo di inter-arrivo è il tempo che intercorre tra un arrivo nel sistema e il successivo))
+fw_psh_flag (Fwd PSH Flags): numero di volte che PSH (push) flag è stato cambiato nei pacchetti che viaggiano in direzione forward
+bw_psh_flag (Bwd PSH Flags): numero di volte che PSH (push) flag è stato cambiato nei pacchetti che viaggiano in direzione backward
+fw_urg_flag (Fwd URG Flags): numero di volte che URG (urgent) flag è stato cambiato nei pacchetti che viaggiano in direzione forward
+bw_urg_flag (Bwd URG Flags): numero di volte che URG (urgent) flag è stato cambiato nei pacchetti che viaggiano in direzione backward
+fw_hdr_len (Fwd Header Len): byte totali utilizzati per l'intestazione in direzione forward
+bw_hdr_len (Bwd Header Len): byte totali utilizzati per l'intestazione in direzione backward
+fw_pkt_s (Fwd Pkts/s): numero di pacchetti forward per secondo
+bw_pkt_s (Bwd Pkts/s): numero di pacchetti backward per secondo
+pkt_len_min (Pkt Len Min): lunghezza minima di un flusso
+pkt_len_max (Pkt Len Max): lunghezza massima di un flusso
+pkt_len_avg (Pkt Len Mean): lunghezza media di un flusso
+pkt_len_std (Pkt Len Std): deviazione standard della lunghezza di un flusso
+pkt_len_va (Pkt Len Var): tempo di arrivo minimo tra un pacchetto e l'altro (Minimum inter-arrival time of packet (il tempo di inter-arrivo è il tempo che intercorre tra un arrivo nel sistema e il successivo))
 
 https://www.keycdn.com/support/tcp-flags
 
-fin_cnt: numero di pacchetti con flag = FIN (FIN (finished flag) viene utilizzato per indicare l'ultimo pacchetto inviato dal mittente, indicante che non ci sono più dati dopo di quello inviati dal mittente)
-syn_cnt: numero di pacchetti con flag = SYN (SYN (syncronization flag) viene utilizzato per stabilire un handshake a tre vie tra due host. Solo il primo pacchetto sia del mittente che del destinatario dovrebbe avere questo flag impostato)
-rst_cnt: numero di pacchetti con flag = RST (RST (reset flag) viene inviato dal destinatario al mittente quando un pacchetto viene inviato ad un particolare host che non lo aspettava)
-pst_cnt: numero di pacchetti con flag = PUSH (PUSH indica al destinatario di elaborare questi pacchetti man mano che vengono ricevuti invece di memorizzarli nel buffer.)
-ack_cnt: numero di pacchetti con flag = ACK (ACK (acknowledgment flag) viene utilizzata per confermare la corretta ricezione di un pacchetto)
-urg_cnt: numero di pacchetti con flag = URG (URG (urgent flag) viene utilizzato per notificare il destinatario di processare i pacchetti urgenti prima degli altri pacchetti)
-cwe_cnt: numero di pacchetti con flag = CWE (CWE (CWR = congestion window reduced flag (?)) viene utilizzato dal mittente per indicare che ha ricevuto un pacchetto con il flag ECE impostato)
-ece_cnt: numero di pacchetti con flag = ECE (ECE viene utilizzato per indicare se il peer TCP è compatibile con ECN. ECN consente la notifica end-to-end della congestione della rete senza eliminare i pacchetti)
-down_up_ratio: rapporto tra download e upload
-pkt_size_avg: dimensione media del pacchetto
-fw_seg_avg: dimensione media osservata in direzione forward
-bw_seg_avg: dimensione media osservata in direzione backward
-fw_byt_blk_avg: numero medio del tasso di massa di bytes (bytes bulk rate) in direzione forward
-fw_pkt_blk_avg: numero medio del tasso di massa di pacchetti (packets bulk rate) in direzione forward
-fw_blk_rate_avg: numero medio del tasso di massa in direzione forward
-bw_byt_blk_avg: numero medio del tasso di massa di bytes (bytes bulk rate) in direzione backward
-bw_pkt_blk_avg: numero medio del tasso di massa di pacchetti (packets bulk rate) in direzione backward
-bw_blk_rate_avg: numero medio del tasso di massa in direzione backward
-
+fin_cnt (FIN Flag Cnt): numero di pacchetti con flag = FIN (FIN (finished flag) viene utilizzato per indicare l'ultimo pacchetto inviato dal mittente, indicante che non ci sono più dati dopo di quello inviati dal mittente)
+syn_cnt (SYN Flag Cnt): numero di pacchetti con flag = SYN (SYN (syncronization flag) viene utilizzato per stabilire un handshake a tre vie tra due host. Solo il primo pacchetto sia del mittente che del destinatario dovrebbe avere questo flag impostato)
+rst_cnt (RST Flag Cnt): numero di pacchetti con flag = RST (RST (reset flag) viene inviato dal destinatario al mittente quando un pacchetto viene inviato ad un particolare host che non lo aspettava)
+pst_cnt (PSH Flag Cnt): numero di pacchetti con flag = PUSH (PUSH indica al destinatario di elaborare questi pacchetti man mano che vengono ricevuti invece di memorizzarli nel buffer.)
+ack_cnt (ACK Flag Cnt): numero di pacchetti con flag = ACK (ACK (acknowledgment flag) viene utilizzata per confermare la corretta ricezione di un pacchetto)
+urg_cnt (URG Flag Cnt): numero di pacchetti con flag = URG (URG (urgent flag) viene utilizzato per notificare il destinatario di processare i pacchetti urgenti prima degli altri pacchetti)
+cwe_cnt (CWE Flag Count): numero di pacchetti con flag = CWE (CWE (CWR = congestion window reduced flag (?)) viene utilizzato dal mittente per indicare che ha ricevuto un pacchetto con il flag ECE impostato)
+ece_cnt (ECE Flag Cnt): numero di pacchetti con flag = ECE (ECE viene utilizzato per indicare se il peer TCP è compatibile con ECN. ECN consente la notifica end-to-end della congestione della rete senza eliminare i pacchetti)
+down_up_ratio (Down/Up Ratio): rapporto tra download e upload
+pkt_size_avg (Pkt Size Avg): dimensione media del pacchetto
+fw_seg_avg (Fwd Seg Size Avg): dimensione media osservata in direzione forward
+bw_seg_avg (Bwd Seg Size Avg): dimensione media osservata in direzione backward
+fw_byt_blk_avg (Fwd Byts/b Avg): numero medio del tasso di massa di bytes (bytes bulk rate) in direzione forward
+fw_pkt_blk_avg (Fwd Pkts/b Avg): numero medio del tasso di massa di pacchetti (packets bulk rate) in direzione forward
+fw_blk_rate_avg (Fwd Blk Rate Avg): numero medio del tasso di massa in direzione forward
+bw_byt_blk_avg (Bwd Byts/b Avg): numero medio del tasso di massa di bytes (bytes bulk rate) in direzione backward
+bw_pkt_blk_avg (Bwd Pkts/b Avg): numero medio del tasso di massa di pacchetti (packets bulk rate) in direzione backward
+bw_blk_rate_avg (Bwd Blk Rate Avg): numero medio del tasso di massa in direzione backward
+subfl_fw_pk (Subflow Fwd Pkts): numero medio di pacchetti in un sottoflusso in direzione forward
+subfl_fw_byt (Subflow Fwd Byts): numero medio di bytes in un sottoflusso in direzione forward
+subfl_bw_pkt (Subflow Bwd Pkts): numero medio di pacchetti in un sottoflusso in direzione backward
+subfl_bw_byt (Subflow Bwd Byts): numero medio di bytes in un sottoflusso in direzione backward
+fw_win_byt (Init Fwd Win Byts): numero di bytes inviati nella finestra iniziale in direzione forward
+bw_win_byt (Init Bwd Win Byts): numero di bytes inviati nella finestra iniziale in direzione backward
+fw_act_pkt (Fwd Act Data Pkts): numero di pacchetti con almeno 1 byte di payload di dati TCP in direzione forward
+fw_seg_min (Fwd Seg Size Min): dimesione minima di segmento osservato in direzione forward
+atv_avg (Active Mean): tempo medio di attività di un flusso prima di diventare inattivo
+atv_std (Active Std): deviazione standard del tempo di attività di un flusso prima di diventare inattivo
+atv_max (Active Max): tempo massimo di attività di un flusso prima di diventare inattivo
+atv_min (Active Min): tempo minimo di attività di un flusso prima di diventare inattivo
+idl_avg (Idle Mean): tempo medio di inattività di un flusso prima di diventare attivo
+idl_std (Idle Std): deviazione standard del tempo di inattività di un flusso prima di diventare attivo
+idl_max (Idle Max): tempo massimo di inattività di un flusso prima di diventare attivo
+idl_min (Idle Min): tempo minimo di inattività di un flusso prima di diventare attivo
+Label: colonna indicante se il flusso è benigno o se è presente un qualsiasi tipo di attacco
