@@ -16,3 +16,5 @@ Ad oggi, il rilevamento delle anomalie è al centro dell'attenzione ma la sua ad
 
 L'infrastruttura di attacco comprende 50 macchine e l'organizzazione vittima ha 5 dipartimenti, comprendente 420 macchine e 30 server. Per la generazione di flussi di traffico di rete ed estrazione delle caratteristiche dei dati grezzi è stato utilizzato **CICFlowMeterV3**.
 
+## PreProcessing dei dati
+Al fine di poter effettuare una buona analisi del dataset sono stati rimossi alcuni valori fastidiosi ed effettuato operazioni di scaling sui dati
