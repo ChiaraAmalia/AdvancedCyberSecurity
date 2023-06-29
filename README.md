@@ -32,7 +32,9 @@ Sono state svolte delle operazioni preliminari su ciascun file analizzato, effet
 + **DBSCAN**
 + **Gerarchico Agglomerativo**
 + **Self-Organizing Map**
+
 Sono stati valutati i pro e i contro di ciascun algoritmo con conseguente individuazione dei parametri ottimali.
+
 Per quanto riguarda l'esecuzione degli algoritmi, dopo aver ottenuto i risultati è stata effettuata un'associazione del cluster alla classe. È stata poi applicata la PCA per poter effettuare un ulteriore confronto e calcolate quindi le metriche, tra cui:
 + **Accuracy**
 + **Precision**
